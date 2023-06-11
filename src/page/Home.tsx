@@ -1,7 +1,9 @@
+import { ZHeader } from '../organism/ZHeader'
+
 function App() {
     return (
         <>
-            <header>Hi</header>
+            <ZHeader />
             <body></body>
             <footer></footer>
         </>
