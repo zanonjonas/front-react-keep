@@ -1,8 +1,9 @@
 function App() {
-    const gabi = 'oieeee'
     return (
         <>
-            <p>"Hi"</p>
+            <header>Hi</header>
+            <body></body>
+            <footer></footer>
         </>
     )
 }
