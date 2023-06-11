@@ -1,38 +1,25 @@
 import styled from 'styled-components'
 
-export const Wrap = styled.div`
+export const ZWrap = styled.div`
     background-color: var(--white);
     padding: 8px;
     display: flex;
     justify-content: space-between;
 `
 
-export const MenuButton = styled.button`
-    width: 48px;
+export const ZLogo = styled.img`
     height: 48px;
-    background-color: var(--white);
-    border-radius: 50%;
-    border: none;
-
-    &:hover {
-        background-color: #f5f5f5;
-        cursor: pointer;
-    }
+    width: 48px;
 `
 
-export const ButtonWrap = styled.div`
-    width: auto;
-    justify-items: center;
-`
-
-export const LeftHeader = styled.div`
+export const ZLeftHeaderWrap = styled.div`
     background-color: var(--white);
     height: 65px;
     padding: 8px;
     display: flex;
 `
 
-export const RightHeader = styled.div`
+export const ZRightHeaderWrap = styled.div`
     background-color: var(--white);
     display: flex;
 `
