@@ -2,7 +2,7 @@ import { ComponentType } from 'react'
 import { ButtonWrap, MenuButton } from './styles'
 // import { IconType } from 'react-icons'
 
-// type IconProps = { }
+//type IconProps = {}
 
 type ButtonProps = {
     Icon: ComponentType
