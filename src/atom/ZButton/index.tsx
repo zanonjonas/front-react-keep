@@ -1,10 +1,22 @@
-import { ButtonWrap, MenuButton, Wrap } from './styles'
-import { IconType } from 'react-icons/lib'
+import { ComponentType } from 'react'
+import { ButtonWrap, MenuButton } from './styles'
+// import { IconType } from 'react-icons'
 
-export function ZButton(icone: JSX.Element): JSX.Element {
+// type IconProps = { }
+
+type ButtonProps = {
+    Icon: ComponentType
+}
+
+export function ZButton({ Icon }: ButtonProps): JSX.Element {
+    //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
     return (
         <>
-            <button>{icone}</button>
+            <ButtonWrap>
+                <MenuButton>
+                    <Icon />
+                </MenuButton>
+            </ButtonWrap>
         </>
     )
 }

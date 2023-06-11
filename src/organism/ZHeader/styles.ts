@@ -4,6 +4,7 @@ export const Wrap = styled.div`
     background-color: #ffffff;
     height: 65px;
     padding: 8px;
+    display: flex;
 `
 
 export const MenuButton = styled.button`
