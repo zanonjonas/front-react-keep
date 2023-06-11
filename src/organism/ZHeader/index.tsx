@@ -1,23 +1,23 @@
 import { ZButton } from '../../atom/ZButton'
-import { LeftHeader, RightHeader, Wrap } from './styles'
+import * as S from './styles'
 import { FaBars } from 'react-icons/fa'
 
 export function ZHeader(): JSX.Element {
     return (
         <>
-            <Wrap>
-                <LeftHeader>
+            <S.ZWrap>
+                <S.ZLeftHeaderWrap>
                     <ZButton Icon={FaBars} />
-                    <img src="src\assets\cute.icon.png" />
+                    <S.ZLogo src="src\assets\cute.icon.png" />
                     <p>Keep</p>
                     <div>barra de pesquisa</div>
-                </LeftHeader>
-                <RightHeader>
+                </S.ZLeftHeaderWrap>
+                <S.ZRightHeaderWrap>
                     <ZButton Icon={FaBars} />
                     <ZButton Icon={FaBars} />
                     <ZButton Icon={FaBars} />
-                </RightHeader>
-            </Wrap>
+                </S.ZRightHeaderWrap>
+            </S.ZWrap>
         </>
     )
 }
