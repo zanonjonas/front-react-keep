@@ -1,9 +1,8 @@
 {
-  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-  "editor.formatOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "files.autoSave": "onFocusChange",
-  "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.quoteStyle": "single",
-  "prettier.configPath": ""
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    "editor.formatOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.preferences.quoteStyle": "single",
+    "prettier.configPath": ""
 }

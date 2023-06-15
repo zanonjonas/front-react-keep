@@ -1,10 +1,13 @@
 import { ZHeader } from '../organism/ZHeader'
+import { ZLeftMenu } from '../organism/ZLeftMenu'
 
 function App() {
     return (
         <>
             <ZHeader />
-            <body></body>
+            <div>
+                <ZLeftMenu />
+            </div>
             <footer></footer>
         </>
     )

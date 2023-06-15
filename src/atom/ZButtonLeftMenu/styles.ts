@@ -16,10 +16,15 @@ export const MenuButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 17px;
 
     &:hover {
-        background-color: pink;
+        background-color: var(--gray-100);
         cursor: pointer;
+    }
+
+    &:focus {
+        background-color: red;
     }
 `
 
@@ -29,4 +34,5 @@ export const ButtonWrap = styled.div`
 `
 export const Text = styled.span`
     display: none;
+    font-weight: 500;
 `
