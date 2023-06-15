@@ -43,3 +43,8 @@ export const MiddleHeaderWrap = styled.div`
 export const ButtonsWrap = styled.div`
     display: flex;
 `
+
+export const MenuButtonWrap = styled.div`
+  margin-left: 8px;
+`
+  
