@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const SearchInputWrap = styled.div`
   background-color: var(--light-gray);
   height: 48px;
-  border-radius: 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
   display: flex;
   flex: 1 1 auto;
   max-width: 720px;
