@@ -7,22 +7,19 @@ import { IconContext } from 'react-icons'
 
 type ButtonProps = {
     Icon: ComponentType
+    backgroundcolor?: string
 }
 
-export function ZButton({ Icon }: ButtonProps): JSX.Element {
+export function ZButton({ Icon, backgroundcolor }: ButtonProps): JSX.Element {
     //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
     return (
         <>
             <S.ButtonWrap>
-                <S.MenuButton>
-                    <IconContext.Provider
-                        value={{ className: 'shared-class', size: '22' }}
-                    >
-                        <>
-                            <Icon />
-                        </>
+                <S.Button backgroundcolor={backgroundcolor}>
+                    <IconContext.Provider value={{ size: '24' }}>
+                        <Icon />
                     </IconContext.Provider>
-                </S.MenuButton>
+                </S.Button>
             </S.ButtonWrap>
         </>
     )
