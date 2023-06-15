@@ -4,7 +4,6 @@ function App() {
     return (
         <>
             <ZHeader />
-            <body></body>
             <footer></footer>
         </>
     )

@@ -6,12 +6,17 @@ export const Wrap = styled.div`
     padding: 8px;
 `
 
-export const MenuButton = styled.button`
+type ButtonProps = {
+    backgroundcolor?: string
+}
+
+export const Button = styled.button<ButtonProps>`
     width: 48px;
     height: 48px;
-    background-color: #ffffff;
+    background-color: ${ (props) => (props.backgroundcolor === undefined) ? 'var(--white)' : props.backgroundcolor };
     border-radius: 50%;
     border: none;
+    
 
     &:hover {
         background-color: #f5f5f5;
