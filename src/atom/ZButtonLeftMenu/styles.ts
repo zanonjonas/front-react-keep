@@ -26,6 +26,10 @@ export const MenuButton = styled.button`
     &:focus {
         background-color: red;
     }
+
+    &:blur {
+        background-color: red;
+    }
 `
 
 export const ButtonWrap = styled.div`

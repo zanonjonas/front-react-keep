@@ -1,4 +1,4 @@
-import { ComponentType, MouseEvent } from 'react'
+import { ComponentType, MouseEvent, useState } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
 // import { IconType } from 'react-icons'
@@ -11,13 +11,14 @@ type ButtonProps = {
     Id: string
 }
 
-const onMenuClick = (e: MouseEvent, Id: string) => {
-    document.getElementById(Id)?.focus()
-    e.preventDefault()
-}
-
 export function ZButtonLeftMenu({ Icon, Text, Id }: ButtonProps): JSX.Element {
     //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
+    // const []
+
+    const onMenuClick = (e: MouseEvent, Id: string) => {
+        document.getElementById(Id)?.focus()
+    }
+
     return (
         <>
             <S.ButtonWrap>
