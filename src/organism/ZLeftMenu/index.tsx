@@ -8,16 +8,23 @@ export function ZLeftMenu(): JSX.Element {
         <S.Wrapper>
             <S.Sidebar>
                 <ZButtonLeftMenu
+                    data-close
                     Id="teste1"
                     Icon={AiOutlineBulb}
                     Text={'Notas'}
                 />
                 <ZButtonLeftMenu
+                    data-close
                     Id="teste2"
                     Icon={AiOutlineBell}
                     Text={'Lembretes'}
                 />
-                <ZButtonLeftMenu Id="teste3" Icon={BiPencil} Text={'Editar'} />
+                <ZButtonLeftMenu
+                    data-close
+                    Id="teste3"
+                    Icon={BiPencil}
+                    Text={'Editar'}
+                />
             </S.Sidebar>
         </S.Wrapper>
     )

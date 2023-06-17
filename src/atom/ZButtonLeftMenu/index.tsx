@@ -1,4 +1,4 @@
-import { ComponentType, MouseEvent } from 'react'
+import { ComponentType, useEffect, useRef, useState, MouseEvent } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
 // import { IconType } from 'react-icons'
@@ -14,24 +14,44 @@ type ButtonProps = {
 export function ZButtonLeftMenu({ Icon, Text, Id }: ButtonProps): JSX.Element {
     //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
     // const []
+    const containerRef = useRef<HTMLInputElement>(null)
+    const [IsSelected, SetIsSelected] = useState(false)
 
-    const onMenuClick = (e: MouseEvent, Id: string) => {
-        document.getElementById(Id)?.focus()
+    const onClick = () => {
+        SetIsSelected(!IsSelected)
     }
+
+    const handleClickOutside = (event: Event) => {
+        const e = event.target as HTMLInputElement
+
+        const isButton = e.className.includes('MenuButton')
+        console.log(isButton)
+        if (
+            containerRef.current &&
+            !containerRef.current.contains(e) &&
+            isButton
+        ) {
+            SetIsSelected(false)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside)
+        return () => {
+            document.removeEventListener('click', handleClickOutside)
+        }
+    }, [])
 
     return (
         <>
-            <S.ButtonWrap>
-                <S.MenuButton
-                    id={Id}
-                    onClick={(e: MouseEvent) => onMenuClick(e, Id)}
-                >
-                    <IconContext.Provider
-                        value={{ className: 'shared-class', size: '22' }}
-                    >
+            <S.ButtonWrap ref={containerRef}>
+                <S.MenuButton id={Id} onClick={onClick} IsSelected={IsSelected}>
+                    <IconContext.Provider value={{ size: '22' }}>
                         <>
-                            <Icon />
-                            <S.Text>{Text}</S.Text>
+                            <S.Divteste>
+                                <Icon />
+                                <S.Text>{Text}</S.Text>
+                            </S.Divteste>
                         </>
                     </IconContext.Provider>
                 </S.MenuButton>
