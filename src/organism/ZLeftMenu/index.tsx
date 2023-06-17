@@ -1,24 +1,28 @@
 import { ZButtonLeftMenu } from '../../atom/ZButtonLeftMenu'
 import * as S from './styles'
-import { AiOutlineBulb, AiOutlineBell } from 'react-icons/ai'
-import { BiPencil } from 'react-icons/bi'
+
+import { LeftMenuType } from '../../context/LeftMenuTypes.ts'
+
+import { useLeftMenu } from '../../context/LeftMenuContext'
+
+const leftMenuItems: LeftMenuType[] | null = useLeftMenu()
+
+let menuList = null
+
+if (leftMenuItems) {
+    menuList = leftMenuItems.map((item: LeftMenuType, index: number) => (
+        <ZButtonLeftMenu
+            Id={index.toString()}
+            Icon={item.icon}
+            Text={item.label}
+        />
+    ))
+}
 
 export function ZLeftMenu(): JSX.Element {
     return (
         <S.Wrapper>
-            <S.Sidebar>
-                <ZButtonLeftMenu
-                    Id="teste1"
-                    Icon={AiOutlineBulb}
-                    Text={'Notas'}
-                />
-                <ZButtonLeftMenu
-                    Id="teste2"
-                    Icon={AiOutlineBell}
-                    Text={'Lembretes'}
-                />
-                <ZButtonLeftMenu Id="teste3" Icon={BiPencil} Text={'Editar'} />
-            </S.Sidebar>
+            <S.Sidebar></S.Sidebar>
         </S.Wrapper>
     )
 }

@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer } from 'react'
 import { AiOutlineBulb, AiOutlineBell } from 'react-icons/ai'
 import { BiPencil } from 'react-icons/bi'
 
-import { LeftMenuActionType, LeftMenuListType } from './LeftMenuTypes'
+import { LeftMenuActionType, LeftMenuType } from './LeftMenuTypes'
 
 export function LeftMenuProvider({ children }: { children: JSX.Element }) {
     const [menuItemList, dispatch] = useReducer(
@@ -20,28 +20,28 @@ export function LeftMenuProvider({ children }: { children: JSX.Element }) {
     )
 }
 
-export function useTasks() {
+export function useLeftMenu() {
     return useContext(LeftMenuContext)
 }
 
-export function useTasksDispatch() {
+export function useLeftMenuDispatch() {
     return useContext(LeftMenuDispatchContext)
 }
 
-const initialLeftMenuList: LeftMenuListType = [
+const initialLeftMenuList: LeftMenuType[] = [
     { label: 'Notas', isSelected: false, icon: AiOutlineBulb },
     { label: 'Lembretes', isSelected: false, icon: AiOutlineBell },
     { label: 'Editar', isSelected: false, icon: BiPencil },
 ]
 
-const LeftMenuContext = createContext<LeftMenuListType | null>(null)
+const LeftMenuContext = createContext<LeftMenuType[] | null>(null)
 const LeftMenuDispatchContext =
     createContext<React.Dispatch<LeftMenuActionType> | null>(null)
 
 function leftMenuReducer(
-    menuItemList: LeftMenuListType,
+    menuItemList: LeftMenuType[],
     action: LeftMenuActionType
-): LeftMenuListType {
+): LeftMenuType[] {
     switch (action.type) {
         case 'select': {
             return menuItemList.map((item) =>

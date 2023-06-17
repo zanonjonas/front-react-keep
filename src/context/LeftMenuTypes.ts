@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons'
+
 export type LeftMenuActionPayloadType = {
   label: string
 }
@@ -7,8 +9,8 @@ export type LeftMenuActionType = {
   payload: LeftMenuActionPayloadType
 }
 
-export type LeftMenuListType = {
+export type LeftMenuType = {
   label: string
   isSelected: boolean
-  icon: JSX.Element
-}[]
+  icon: IconType
+}
