@@ -2,7 +2,7 @@ import { ComponentType } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
 
-import { useLeftMenu, useLeftMenuDispatch } from '../../context/LeftMenuContext'
+import { useLeftMenuDispatch } from '../../context/LeftMenuContext'
 
 type ButtonProps = {
     label: string
