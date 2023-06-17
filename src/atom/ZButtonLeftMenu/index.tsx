@@ -1,4 +1,4 @@
-import { ComponentType, MouseEvent } from 'react'
+import { ComponentType } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
 
