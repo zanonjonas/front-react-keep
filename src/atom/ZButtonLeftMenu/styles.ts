@@ -23,10 +23,10 @@ export const MenuButton = styled.button<LeftMenuStyleProps>`
     justify-content: center;
     align-items: center;
     margin-left: 17px;
-    ${props => props.isSelected ? 'background-color: red;' : 'background-color: white;'}
+    ${props => props.isSelected ? 'background-color: purple;' : 'background-color: white;'}
 
     &:hover {
-        ${props => (!props.isSelected) && ('background-color: var(--gray-100);')}
+        ${props => (!props.isSelected) && ('background-color: pink;')}
         cursor: pointer;
     }
 

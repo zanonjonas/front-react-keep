@@ -10,7 +10,7 @@ export const Sidebar = styled.div`
     width: 30%;
     height: 100%;
     background-color: var(--white);
-    transition: all 10ms ease;
+    transition: all 50ms ease;
     display: flex;
     flex-direction: column;
 
@@ -30,11 +30,11 @@ export const Sidebar = styled.div`
             width: 250px;
             border-radius: 0px 40px 40px 0px;
             justify-content: start;
-            padding-left: 30px;
+            padding-left: 50px;
             gap: 25px;
             margin-left: 0px;
 
-            transition: all 10ms linear;
+            transition: all 40ms linear;
         }
 
         &:hover ${S.Label} {
