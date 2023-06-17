@@ -1,8 +1,9 @@
 import { ComponentType } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
-// import { IconType } from 'react-icons'
 
+// FYI (1): Outro jeito de fazer...
+// import { IconType } from 'react-icons'
 //type IconProps = {}
 
 type ButtonProps = {
@@ -11,6 +12,7 @@ type ButtonProps = {
 }
 
 export function ZButton({ Icon, backgroundcolor }: ButtonProps): JSX.Element {
+    // FYI (1): Outro jeito de fazer...
     //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
     return (
         <>
