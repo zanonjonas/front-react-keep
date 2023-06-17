@@ -23,9 +23,6 @@ export function ZLeftMenu(): JSX.Element {
         })
     }
 
-    console.log('leftMenuItems', leftMenuItems)
-    console.log('menuList', menuList)
-
     return (
         <S.Wrapper>
             <S.Sidebar>{menuList}</S.Sidebar>
