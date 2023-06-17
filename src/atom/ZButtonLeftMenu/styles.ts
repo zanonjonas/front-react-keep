@@ -1,12 +1,18 @@
 import styled from 'styled-components/macro'
 
+type LeftMenuStyleProps = {
+    isSelected: boolean;
+}
+
+
+
 export const Wrap = styled.div`
     background-color: #ffffff;
     height: 65px;
     padding: 8px;
 `
 
-export const MenuButton = styled.button`
+export const MenuButton = styled.button<LeftMenuStyleProps>`
     width: 48px;
     height: 48px;
     background-color: #ffffff;
@@ -17,14 +23,11 @@ export const MenuButton = styled.button`
     justify-content: center;
     align-items: center;
     margin-left: 17px;
+    ${props => props.isSelected ? 'background-color: red;' : 'background-color: white;'}
 
     &:hover {
-        background-color: var(--gray-100);
+        ${props => (!props.isSelected) && ('background-color: var(--gray-100);')}
         cursor: pointer;
-    }
-
-    &:focus {
-        background-color: red;
     }
 
     &:blur {
@@ -36,7 +39,7 @@ export const ButtonWrap = styled.div`
     width: auto;
     justify-items: center;
 `
-export const Text = styled.span`
+export const Label = styled.span`
     display: none;
     font-weight: 500;
 `

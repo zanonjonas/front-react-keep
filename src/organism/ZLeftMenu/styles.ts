@@ -37,7 +37,7 @@ export const Sidebar = styled.div`
             transition: all 10ms linear;
         }
 
-        &:hover ${S.Text} {
+        &:hover ${S.Label} {
             justify-content: center;
             display: contents;
         }

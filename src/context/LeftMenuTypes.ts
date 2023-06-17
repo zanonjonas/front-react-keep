@@ -12,5 +12,5 @@ export type LeftMenuActionType = {
 export type LeftMenuType = {
   label: string
   isSelected: boolean
-  icon: IconType
+  Icon: IconType
 }

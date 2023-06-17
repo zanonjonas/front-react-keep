@@ -5,7 +5,7 @@ import { BiPencil } from 'react-icons/bi'
 
 import { LeftMenuActionType, LeftMenuType } from './LeftMenuTypes'
 
-export function LeftMenuProvider({ children }: { children: JSX.Element }) {
+export function LeftMenuProvider({ children }: { children: JSX.Element[] }) {
     const [menuItemList, dispatch] = useReducer(
         leftMenuReducer,
         initialLeftMenuList
@@ -29,9 +29,9 @@ export function useLeftMenuDispatch() {
 }
 
 const initialLeftMenuList: LeftMenuType[] = [
-    { label: 'Notas', isSelected: false, icon: AiOutlineBulb },
-    { label: 'Lembretes', isSelected: false, icon: AiOutlineBell },
-    { label: 'Editar', isSelected: false, icon: BiPencil },
+    { label: 'Notas', isSelected: false, Icon: AiOutlineBulb },
+    { label: 'Lembretes', isSelected: false, Icon: AiOutlineBell },
+    { label: 'Editar', isSelected: false, Icon: BiPencil },
 ]
 
 const LeftMenuContext = createContext<LeftMenuType[] | null>(null)
