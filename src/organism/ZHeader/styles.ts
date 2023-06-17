@@ -5,6 +5,9 @@ export const Wrap = styled.div`
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #DADCE0;
 `
 
 export const Logo = styled.img`
@@ -23,7 +26,7 @@ export const LogoFont = styled.p`
 
 export const LeftHeaderWrap = styled.div`
     background-color: var(--white);
-    height: 64px;
+    height: 48px;
     padding-right: 90px;
     display: flex;
     
@@ -43,3 +46,8 @@ export const MiddleHeaderWrap = styled.div`
 export const ButtonsWrap = styled.div`
     display: flex;
 `
+
+export const MenuButtonWrap = styled.div`
+  margin-left: 8px;
+`
+  

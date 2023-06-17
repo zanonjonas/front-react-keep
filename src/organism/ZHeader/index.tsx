@@ -14,7 +14,9 @@ export function ZHeader(): JSX.Element {
         <>
             <S.Wrap>
                 <S.LeftHeaderWrap>
-                    <ZButton Icon={MdMenu} />
+                    <S.MenuButtonWrap>
+                        <ZButton Icon={MdMenu} />
+                    </S.MenuButtonWrap>
                     <S.Logo src="src\assets\cute.icon.png" />
                     <S.LogoFont>Keep</S.LogoFont>
                 </S.LeftHeaderWrap>
