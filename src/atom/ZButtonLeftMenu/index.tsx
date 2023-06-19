@@ -1,51 +1,33 @@
-import { ComponentType, useEffect, useRef, useState, MouseEvent } from 'react'
+import { ComponentType } from 'react'
 import * as S from './styles'
 import { IconContext } from 'react-icons'
-// import { IconType } from 'react-icons'
-
-//type IconProps = {}
 
 type ButtonProps = {
     Icon: ComponentType
     Text: string
-    Id: string
+    Id: Number
+    isSelected: boolean
+    fonClick: (index: number) => void
+    findex: number
 }
 
-export function ZButtonLeftMenu({ Icon, Text, Id }: ButtonProps): JSX.Element {
-    //export function ZButton({ icon: Icon }: { icon: IconType }): JSX.Element {
-    // const []
-    const containerRef = useRef<HTMLInputElement>(null)
-    const [IsSelected, SetIsSelected] = useState(false)
-
-    const onClick = () => {
-        SetIsSelected(!IsSelected)
-    }
-
-    const handleClickOutside = (event: Event) => {
-        const e = event.target as HTMLInputElement
-
-        const isButton = e.className.includes('MenuButton')
-        console.log(isButton)
-        if (
-            containerRef.current &&
-            !containerRef.current.contains(e) &&
-            isButton
-        ) {
-            SetIsSelected(false)
-        }
-    }
-
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutside)
-        return () => {
-            document.removeEventListener('click', handleClickOutside)
-        }
-    }, [])
-
+export function ZButtonLeftMenu({
+    Icon,
+    Text,
+    Id,
+    fonClick,
+    isSelected,
+    findex,
+}: ButtonProps): JSX.Element {
     return (
         <>
-            <S.ButtonWrap ref={containerRef}>
-                <S.MenuButton id={Id} onClick={onClick} IsSelected={IsSelected}>
+            <S.ButtonWrap>
+                <S.MenuButton
+                    onClick={() => {
+                        fonClick(findex)
+                    }}
+                    isSelected={isSelected}
+                >
                     <IconContext.Provider value={{ size: '22' }}>
                         <>
                             <S.Divteste>

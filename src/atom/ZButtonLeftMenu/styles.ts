@@ -4,10 +4,10 @@ export const Wrap = styled.div`
     background-color: #ffffff;
     height: 65px;
     padding: 8px;
-    pointer-events: none;
+    /* pointer-events: none; */
 `
 
-export const MenuButton = styled.button<{ IsSelected: boolean }>`
+export const MenuButton = styled.button<{ isSelected: boolean }>`
     width: 48px;
     height: 48px;
 
@@ -18,7 +18,7 @@ export const MenuButton = styled.button<{ IsSelected: boolean }>`
     justify-content: center;
     align-items: center;
     margin-left: 17px;
-    background-color: ${(props) => (props.IsSelected ? 'red' : '#ffffff')};
+    background-color: ${(props) => (props.isSelected ? 'red' : '#ffffff')};
 
     &:hover {
         background-color: var(--gray-100);
@@ -38,11 +38,11 @@ export const ButtonWrap = styled.div`
 export const Divteste = styled.div`
     display: flex;
     align-items: center;
-    pointer-events: none;
+    /* pointer-events: none; */
     gap: 10px;
 `
 export const Text = styled.span`
     display: none;
     font-weight: 500;
-    pointer-events: none;
+    /* pointer-events: none; */
 `
